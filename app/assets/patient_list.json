@@ -1,0 +1,82 @@
+{
+  "facility": [
+    {
+      "name": "Blue Alps Ski Camp"
+    }
+  ],
+  "patient": [
+    {
+      "first_name": "Thomas",
+      "middle_name": "John",
+      "last_name": "Schudel",
+      "mr": "30997",
+      "dob": "1978-02-17T12:00:00.000Z",
+      "age": 43,
+      "gender": "male",
+      "admission":
+        {
+          "date": "2018-02-18T17:07:00.000-5:00",
+          "diagnoses":[
+            {
+              "code": "S82.101",
+              "description": "fracture of upper end of the right tibia"
+            }
+          ],
+          "symptoms": [
+            "severe pain",
+            "swelling",
+            "limited bending of the joint"
+          ],
+          "observations": [
+            "No soft tissues were damaged"
+          ]
+        },
+      "allergies": [
+        "hypersensitivity to aspirin or NSAIDs",
+        "gluten intolerance"
+      ],
+      "chronic_conditions":[
+        {
+          "code": "J45",
+          "description": "Asthma"
+        }
+      ],
+      "medications": [
+        {
+          "name": "Acetaminophen",
+          "dosage": 500,
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q4hr",
+          "necessity": "relieve pain"
+        },
+        {
+          "name": "Naproxen",
+          "dosage": 500,
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q6hr",
+          "necessity": "relieve swelling"
+        }
+      ],
+      "diagnostic_procedures":[
+        {
+          "description": "exploratory radiography",
+          "moment": "2018-02-18T17:15:00.000-5:00"
+        }
+      ],
+      "diagnoses":[
+        {
+          "code": "S82.101A",
+          "description": "closed fracture in the right tibia"
+        }
+      ],
+      "treatments":[
+        {
+          "description": "temporary bracing the right leg",
+          "necessity": "restrict the motion"
+        }
+      ]
+    }
+  ]
+}

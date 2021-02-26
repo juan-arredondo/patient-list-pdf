@@ -1,0 +1,21 @@
+<h2>Patient List</h2>
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Medical Record</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Middle Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr style="background-color: #343a40;">
+      <th scope="row"><%= link_to @mr, patient_path(1), class:"btn btn-dark" %></th>
+      <td><%= link_to @last_name, patients_path(1), class:"btn btn-dark" %></td>
+      <td><%= link_to @first_name, patients_path(1), class:"btn btn-dark" %></td>
+      <td><%= link_to @middle_name, patients_path(1), class:"btn btn-dark" %></td>
+    </tr>
+  </tbody>
+</table>
