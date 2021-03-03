@@ -9,7 +9,7 @@
   <li class="list-group-item">
     <div class="container">
       <h5 class="mb-0">Name:</h5>
-      <p class="mb-0"><%= @facility_name %></p>
+      <p class="mb-0"><%= @facility['name'] %></p>
     </div>
   </li>
   <li class="list-group-item">
@@ -20,36 +20,37 @@
   <li class="w-100 list-group-item">
     <div class="container">
       <h5 class="mb-0">First Name</h5>
-      <p class="mb-0"><%= @first_name %></p>
+      <p class="mb-0"><%= @patient['first_name'] %></p>
     </div>
   </li>
   <li class="w-100 list-group-item">
     <div class="container">
       <h5 class="mb-0">Middle Name</h5>
-      <p class="mb-0"><%= @middle_name %></p>
+      <p class="mb-0"><%= @patient['middle_name'] %></p>
     </div>
   </li>
   <li class="w-100 list-group-item">
     <div class="container">
       <h5 class="mb-0">Last Name</h5>
-      <p class="mb-0"><%= @last_name %></p>
+      <p class="mb-0"><%= @patient['last_name'] %></p>
     </div>
   </li>
   <li class="w-100 list-group-item">
     <div class="container">
       <h5 class="mb-0">Medical Record (MR)</h5>
-      <p class="mb-0"><%= @mr %></p>
+      <p class="mb-0"><%= @patient['mr'] %></p>
     </div>
   </li>
 </ul>
+
 <ul class="list-group">
   <li class="list-group-item">
     <h3>Summary</h3>
-    <p>This <%=@age%> years old <%=@gender%> was admitted to <%=@facility_name%> emergency facility on <%=@admission_moment%> due to a <%=@admission_diagnoses_description%> (<%=@admission_diagnoses_code%>). The observed symptoms on admission were <%=@admission_symptoms%>. <%=@admission_observations%>.</p>
+    <p>This <%= patient_age %> years old <%= @patient['gender'] %> was admitted to <%=@facility['name']%> emergency facility on <%= DateTime.parse(@patient['admission']['date']).strftime('%B %d, %Y, at %l:%M %p') %> due to a <%= admission_diagnoses %>. The observed symptoms on admission were <%= @patient['admission']['symptoms'].to_sentence %>. <%= @patient['admission']['observations'].to_sentence %>.</p>
 
-    <p>Upon asking about known allergies, the patient disclosed <%=@allergies%>. Upon asking about chronic conditions, the patient disclosed <%=@chronic_conditions_description%> (<%=@chronic_conditions_code%>). The patient was administered with <%=@medication%>.</p>
+    <p>Upon asking about known allergies, the patient disclosed <%= @patient['allergies'].to_sentence %>. Upon asking about chronic conditions, the patient disclosed <%= chronic_conditions %>. The patient was administered with <%= medications %>.</p>
 
-    <p>The staff performed an <%=@diagnostic_procedures_description%> on <%=@diagnostic_procedures_moment%>, revealing a <%=@diagnoses_description%> (<%=@diagnoses_code%>). Our team proceeded to <%=@treatment%>.</p>
+    <p>The staff performed an <%= diagnostic_procedures %>, revealing a <%= diagnoses %>. Our team proceeded to <%= treatments %>.</p>
   </li>
 </ul>
 <br>

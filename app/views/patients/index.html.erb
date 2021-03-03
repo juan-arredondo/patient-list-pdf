@@ -12,10 +12,10 @@
 
   <tbody>
     <tr style="background-color: #343a40;">
-      <th scope="row"><%= link_to @mr, patient_path(1), class:"btn btn-dark" %></th>
-      <td><%= link_to @last_name, patients_path(1), class:"btn btn-dark" %></td>
-      <td><%= link_to @first_name, patients_path(1), class:"btn btn-dark" %></td>
-      <td><%= link_to @middle_name, patients_path(1), class:"btn btn-dark" %></td>
+      <th scope="row"><%= link_to @patient['mr'], patient_path(1), class:"btn btn-dark" %></th>
+      <td><%= link_to @patient['last_name'], patients_path(1), class:"btn btn-dark" %></td>
+      <td><%= link_to @patient['first_name'], patients_path(1), class:"btn btn-dark" %></td>
+      <td><%= link_to @patient['middle_name'], patients_path(1), class:"btn btn-dark" %></td>
     </tr>
   </tbody>
 </table>
