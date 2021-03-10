@@ -7,6 +7,7 @@
       <th scope="col">Last Name</th>
       <th scope="col">First Name</th>
       <th scope="col">Middle Name</th>
+      <th scope="col">Facility</th>
     </tr>
   </thead>
 
@@ -16,6 +17,7 @@
       <td><%= link_to @patient['last_name'], patients_path(1), class:"btn btn-dark" %></td>
       <td><%= link_to @patient['first_name'], patients_path(1), class:"btn btn-dark" %></td>
       <td><%= link_to @patient['middle_name'], patients_path(1), class:"btn btn-dark" %></td>
+      <td><%= link_to @facility['name'], patients_path(1), class:"btn btn-dark" %></td>
     </tr>
   </tbody>
 </table>
