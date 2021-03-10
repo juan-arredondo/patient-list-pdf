@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_data
+  before_action :set_data, only: [:index, :show]
 
   def index
   end
@@ -9,7 +9,6 @@ class PatientsController < ApplicationController
       format.html
       format.pdf {render template: 'patients/patient_summary', pdf: 'Patient Summary', layout: 'pdf.html'}
     end
-
   end
 
   private

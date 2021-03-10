@@ -46,9 +46,9 @@
 <ul class="list-group">
   <li class="list-group-item">
     <h3>Summary</h3>
-    <p>This <%= patient_age %> years old <%= @patient['gender'] %> was admitted to <%=@facility['name']%> emergency facility on <%= DateTime.parse(@patient['admission']['date']).strftime('%B %d, %Y, at %l:%M %p') %> due to a <%= admission_diagnoses %>. The observed symptoms on admission were <%= @patient['admission']['symptoms'].to_sentence %>. <%= @patient['admission']['observations'].to_sentence %>.</p>
+    <p>This <%= patient_age %> years old <%= @patient['gender'] %> was admitted to <%= @facility['name'] %> emergency facility on <%= admission_time %> due to a <%= admission_diagnoses %>. The observed symptoms on admission were <%= symptoms %>. <%= observations %>.</p>
 
-    <p>Upon asking about known allergies, the patient disclosed <%= @patient['allergies'].to_sentence %>. Upon asking about chronic conditions, the patient disclosed <%= chronic_conditions %>. The patient was administered with <%= medications %>.</p>
+    <p>Upon asking about known allergies, the patient disclosed <%= allergies %>. Upon asking about chronic conditions, the patient disclosed <%= chronic_conditions %>. The patient was administered with <%= medications %>.</p>
 
     <p>The staff performed an <%= diagnostic_procedures %>, revealing a <%= diagnoses %>. Our team proceeded to <%= treatments %>.</p>
   </li>
